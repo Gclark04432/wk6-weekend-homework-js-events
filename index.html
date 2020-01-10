@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <script src="js/app.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>E36 Social Abilities</title>
+</head>
+<body>
+
+  <form id="new-student-form">
+    <div id="form-wrapper">
+
+      <div class="form-item">
+        <label for="student-first-name">Student First Name:</label>
+        <input type="text" id="studentFirstName" required>
+      </div>
+
+      <div class="form-item">
+        <label for="student-last-name">Student Last Name:</label>
+        <input type="text" id="studentLastName" required>
+      </div>
+
+      <div class="form-item">
+        <label for="dance-ability">Dance Ability Out Of 10:</label>
+        <select id="dance-ability">
+          <option value="" disabled selected></option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+
+    </div>
+
+    <input type="submit" value="Save">
+
+  </form>
+
+  <h1>Student List</h1>
+  <ul id="student-list"></ul>
+
+</body>
+</html>
