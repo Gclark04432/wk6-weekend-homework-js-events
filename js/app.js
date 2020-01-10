@@ -33,7 +33,7 @@ const handleNewStudentFormSubmit = function (event) {
   const danceAbility = getStudentDanceAbility(event.target);
 
   const newStudent = document.createElement('li');
-  newStudent.textContent = `${firstName}, ${lastName}, ${danceAbility}`;
+  newStudent.textContent = `${firstName} ${lastName} has a dance ability of ${danceAbility}!`;
   studentList.appendChild(newStudent);
 
   event.target.reset();

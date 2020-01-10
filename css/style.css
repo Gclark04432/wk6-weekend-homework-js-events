@@ -1,6 +1,7 @@
 body {
   display: grid;
   background-color: lightyellow;
+  padding: 0px;
 }
 
 h1 {
@@ -14,6 +15,18 @@ form label {
   text-decoration: underline black;
 }
 
+ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: auto;
+}
+
 li {
   border: darkblue 2px solid;
+  background-color: lightblue;
+  width: auto;
+  padding: 0px;
+  margin: 10px;
+  text-align: center;
+  list-style: none;
 }
