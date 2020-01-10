@@ -28,9 +28,9 @@ const handleNewStudentFormSubmit = function (event) {
 
   const studentList = document.querySelector('#student-list')
 
-  firstName = getStudentFirstName(event.target);
-  lastName = getStudentLastName(event.target);
-  danceAbility = getStudentDanceAbility(event.target);
+  const firstName = getStudentFirstName(event.target);
+  const lastName = getStudentLastName(event.target);
+  const danceAbility = getStudentDanceAbility(event.target);
 
   const newStudent = document.createElement('li');
   newStudent.textContent = `${firstName}, ${lastName}, ${danceAbility}`;
