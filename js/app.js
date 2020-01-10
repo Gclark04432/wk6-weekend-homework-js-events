@@ -23,18 +23,29 @@ const getStudentDanceAbility = function (form) {
   return danceAbility;
 };
 
+const formatNewStudent = function (firstName, lastName, danceAbility) {
+  const studentList = document.querySelector('#student-list')
+
+  const newStudent = document.createElement('li');
+  const formattedName = document.createElement('h2');
+  const formattedDanceAbility = document.createElement('h3');
+
+  newStudent.appendChild(formattedName);
+  newStudent.appendChild(formattedDanceAbility);
+  studentList.appendChild(newStudent);
+
+  formattedName.textContent = `${firstName} ${lastName}`;
+  formattedDanceAbility.textContent = `Dance Ability: ${danceAbility} out of 10`;
+};
+
 const handleNewStudentFormSubmit = function (event) {
   event.preventDefault();
-
-  const studentList = document.querySelector('#student-list')
 
   const firstName = getStudentFirstName(event.target);
   const lastName = getStudentLastName(event.target);
   const danceAbility = getStudentDanceAbility(event.target);
 
-  const newStudent = document.createElement('li');
-  newStudent.textContent = `${firstName} ${lastName} has a dance ability of ${danceAbility}!`;
-  studentList.appendChild(newStudent);
+  formatNewStudent(firstName, lastName, danceAbility);
 
   event.target.reset();
 };
