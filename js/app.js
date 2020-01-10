@@ -23,22 +23,25 @@ const getStudentDanceAbility = function (form) {
   return danceAbility;
 };
 
-const formatNewStudent = function (firstName, lastName, danceAbility, isAlcoholic) {
+const formatNewStudent = function (firstName, lastName, danceAbility, isAlcoholic, attendanceChance) {
   const studentList = document.querySelector('#student-list')
 
   const newStudent = document.createElement('li');
   const formattedName = document.createElement('h2');
   const formattedDanceAbility = document.createElement('h3');
   const alcoholic = document.createElement('h4');
+  const chance = document.createElement('h4');
 
   newStudent.appendChild(formattedName);
   newStudent.appendChild(formattedDanceAbility);
   newStudent.appendChild(alcoholic);
+  newStudent.appendChild(chance);
   studentList.appendChild(newStudent);
 
   formattedName.textContent = `${firstName} ${lastName}`;
   formattedDanceAbility.textContent = `Dance Ability: ${danceAbility} out of 10`;
   alcoholic.textContent = `Are they an alcoholic? ${isAlcoholic}`;
+  chance.textContent = `They have a ${attendanceChance}% chance of making Friday stand-up`
 };
 
 const handleNewStudentFormSubmit = function (event) {
@@ -48,8 +51,9 @@ const handleNewStudentFormSubmit = function (event) {
   const lastName = getStudentLastName(event.target);
   const danceAbility = getStudentDanceAbility(event.target);
   const isAlcoholic = event.target.alcoholic.value;
+  const attendanceChance = event.target.chance.value;
 
-  formatNewStudent(firstName, lastName, danceAbility, isAlcoholic);
+  formatNewStudent(firstName, lastName, danceAbility, isAlcoholic, attendanceChance);
 
   event.target.reset();
 };

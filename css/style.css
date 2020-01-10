@@ -9,13 +9,6 @@ h1 {
   text-decoration: underline black;
 }
 
-form label {
-  margin-top:12px;
-  font-weight: normal;
-  color: green;
-  text-decoration: underline black;
-}
-
 ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
