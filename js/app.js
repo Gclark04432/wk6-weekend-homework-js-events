@@ -8,35 +8,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-  const getStudentFirstName = function (form) {
-    const studentFirstName = form.studentFirstName.value;
-    // const studentLastName = form.studentLastName.value;
-    // const danceAbility = form.danceAbility.value;
+const getStudentFirstName = function (form) {
+  const studentFirstName = form.studentFirstName.value;
+  return studentFirstName;
+};
 
-    return studentFirstName;
-  };
+const getStudentLastName = function (form) {
+  const studentLastName = form.studentLastName.value;
+  return studentLastName;
+};
 
-  const handleNewStudentFormSubmit = function (event) {
-    event.preventDefault();
+const getStudentDanceAbility = function (form) {
+  const danceAbility = form.danceAbility.value;
+  return danceAbility;
+};
 
-    // const studentFirstName = event.target.studentFirstName.value;
-    // const studentLastName = event.target.studentLastName.value;
-    // const danceAbility = event.target.danceAbility.value;
+const handleNewStudentFormSubmit = function (event) {
+  event.preventDefault();
 
-    const studentList = document.querySelector('#student-list')
+  const studentList = document.querySelector('#student-list')
 
-    studentFirstName = getStudentFirstName(event.target);
+  firstName = getStudentFirstName(event.target);
+  lastName = getStudentLastName(event.target);
+  danceAbility = getStudentDanceAbility(event.target);
 
-    const newStudent = document.createElement('li');
-    newStudent.textContent = `${studentFirstName}`;
-    studentList.appendChild(newStudent);
+  const newStudent = document.createElement('li');
+  newStudent.textContent = `${firstName}, ${lastName}, ${danceAbility}`;
+  studentList.appendChild(newStudent);
 
-    event.target.reset();
-  };
+  event.target.reset();
+};
 
-  const handleDeleteAllButtonClick = function () {
+const handleDeleteAllButtonClick = function () {
 
-    const studentList = document.querySelector('#student-list')
-    studentList.innerHTML = "";
+  const studentList = document.querySelector('#student-list')
+  studentList.innerHTML = "";
 
-  };
+};
