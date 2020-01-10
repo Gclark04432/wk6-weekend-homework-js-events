@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const newStudentForm = document.querySelector('#new-student-form');
   newStudentForm.addEventListener('submit', handleNewStudentFormSubmit);
 
+  const deleteAllButton = document.querySelector('#deleteButton');
+  deleteAllButton.addEventListener('click', handleDeleteAllButtonClick)
+
 });
 
   const handleNewStudentFormSubmit = function (event) {
@@ -18,7 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
     newStudent.textContent = `${studentFirstName} ${studentLastName} has adance ability of ${danceAbility}!`;
     studentList.appendChild(newStudent);
 
-
-    console.log(studentFirstName);
     event.target.reset();
+  };
+
+  const handleDeleteAllButtonClick = function () {
+
+    const studentList = document.querySelector('#student-list')
+    studentList.innerHTML = "";
+
   };
