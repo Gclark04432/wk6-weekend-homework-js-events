@@ -8,12 +8,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const handleNewStudentFormSubmit = function (event) {
     event.preventDefault();
 
-    const newStudent = document.createElement('li');
-
     const studentFirstName = event.target.studentFirstName.value;
     const studentLastName = event.target.studentLastName.value;
     const danceAbility = event.target.danceAbility.value;
 
-    console.log(studentFirstName);
+    const studentList = document.querySelector('#student-list')
 
+    const newStudent = document.createElement('li');
+    newStudent.textContent = `${studentFirstName} ${studentLastName} has adance ability of ${danceAbility}!`;
+    studentList.appendChild(newStudent);
+
+
+    console.log(studentFirstName);
+    event.target.reset();
   };
