@@ -24,11 +24,11 @@ const getStudentDanceAbility = function (form) {
 };
 
 const formatNewStudent = function (firstName, lastName, danceAbility, isAlcoholic, attendanceChance) {
-  const studentList = document.querySelector('#student-list')
+  const studentList = document.querySelector('#student-list');
 
   const newStudent = document.createElement('li');
-  const formattedName = document.createElement('h2');
-  const formattedDanceAbility = document.createElement('h3');
+  const formattedName = document.createElement('h3');
+  const formattedDanceAbility = document.createElement('h4');
   const alcoholic = document.createElement('h4');
   const chance = document.createElement('h4');
 

@@ -11,50 +11,59 @@
   <form id="new-student-form">
     <div id="form-wrapper">
 
-      <div class="form-item">
-        <label for="studentFirstName">Student First Name:</label>
-        <input type="text" id="studentFirstName" required>
-      </div>
+      <span id="form-names-and-dance">
+        <div class="form-item">
+          <label for="studentFirstName">Student First Name:</label>
+          <input type="text" id="studentFirstName" required>
+        </div>
 
-      <div class="form-item">
-        <label for="studentLastName">Student Last Name:</label>
-        <input type="text" id="studentLastName" required>
-      </div>
+        <div class="form-item">
+          <label for="studentLastName">Student Last Name:</label>
+          <input type="text" id="studentLastName" required>
+        </div>
 
-      <div class="form-item">
-        <label for="danceAbility">Dance Ability Out Of 10:</label>
-        <select id="danceAbility">
-          <option value="" disabled selected></option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-        </select>
-      </div>
+        <div class="form-item">
+          <label for="danceAbility">Dance Ability Out Of 10:</label>
+          <select id="danceAbility" required>
+            <option value="" disabled selected></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+      </span>
 
-      <p>Are they an alcoholic?</p>
-      <div class="form-item">
-        <input type="radio" name="alcoholic" value="yes" checked>
-        <label for="yes">Yes</label>
-      </div>
+      <hr>
 
-      <div class="form-item">
-        <input type="radio" name="alcoholic" value="no">
-        <label for="no">No</label>
-      </div>
+      <span id="alcohol-and-stand-up">
+        <p>Are they an alcoholic?</p>
+        <div class="form-item">
+          <input type="radio" name="alcoholic" value="yes" checked>
+          <label for="yes">Yes</label>
+        </div>
 
-      <div class="form-item">
-        <input type="range" name="chance" min="0" max="100" step="10">
-        <label for="chance">Percentage Chance of Friday Stand-Up Attendance</label>
-      </div>
+        <div class="form-item">
+          <input type="radio" name="alcoholic" value="no">
+          <label for="no">No</label>
+        </div>
+
+        <br>
+        <div class="form-item">
+          <input type="range" name="chance" min="0" max="100" step="10">
+          <label for="chance">Percentage Chance of Friday Stand-Up Attendance</label>
+        </div>
+      </span>
 
     </div>
+
+    <hr>
 
     <input type="submit" value="Save">
 
@@ -64,8 +73,10 @@
     <input type="button" id="deleteButton" value="Delete All">
   </p>
 
-  <h1>Student List</h1>
-  <ul id="student-list"></ul>
+  <div >
+    <h1 class="container">Student List</h1>
+    <ul id="student-list"></ul>
+  </div>
 
 </body>
 </html>

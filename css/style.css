@@ -1,7 +1,5 @@
 body {
-  display: grid;
-  background-color: lightyellow;
-  padding: 0px;
+  background-color: #8ec3eb;
 }
 
 h1 {
@@ -10,17 +8,39 @@ h1 {
 }
 
 ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 li {
-  border: darkblue 2px solid;
-  background-color: lightblue;
-  width: auto;
-  padding: 0px;
-  margin: 10px;
-  text-align: center;
+  background: #2a6592;
+  padding: 5px;
+  width: 250px;
+  margin-top: 20px;
   list-style: none;
+
+  color: white;
+  text-align: center;
+  border: 2px solid red;
+}
+
+#form-names-and-dance {
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
+  justify-content: space-around;
+}
+
+#alcohol-and-stand-up {
+  display: flex;
+  margin-right: 10px;
+  justify-content: space-around;
+
+}
+
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
 }
