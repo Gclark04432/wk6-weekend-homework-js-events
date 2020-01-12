@@ -11,13 +11,14 @@ ul {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  border: 2px solid black;
 }
 
 li {
   background: #2a6592;
   padding: 5px;
   width: 250px;
-  margin-top: 20px;
+  margin: 20px;
   list-style: none;
 
   color: white;
